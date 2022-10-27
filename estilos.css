@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(112, 158, 222);
+    color: white;
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+}
+
+.clase-h1-prueba {
+    background-color: blue;
+}
+
+
+/*diseño de barra de navegacion*/
+
+.encabezado {
+    background-color: rgb(63, 126, 210);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.lista-barra {
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-link-dos:hover {
+    background-color: #034574;
+}
+
+.nav-link-dos {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-desplegable {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .encabezado {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .lista-barra {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #2c3e50;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100%-60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-item {
+        line-height: 70px;
+    }
+
+    .nav-link-dos:hover {
+        background: none;
+        color: #83c5f7;
+    }
+
+    .nav-desplegable {
+        display: block;
+    }
+
+    .lista-barra_visible {
+        left: 0;
+    }
+}
